@@ -65,30 +65,30 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-//        if (id == R.id.action_next) {
-//            int max = vPager.getChildCount();
-//            if (vPager.getCurrentItem() < max - 1) {
-//                int nextPage = vPager.getCurrentItem() + 1;
-//                vPager.setCurrentItem(nextPage, true);
-//
-//            }
-//
-//        }
-//        else if (id == R.id.action_previous) {
-//            if (vPager.getCurrentItem() > 0) {
-//                int previousPage = vPager.getCurrentItem() - 1;
-//                vPager.setCurrentItem(previousPage, true);
-//
-//            }
-//
-//        }
-//        else if(id == R.id.action_random){
-//            Random random = new Random();
-//            int max = vPager.getChildCount();
-//            int picker = random.nextInt(max);
-//            vPager.setCurrentItem(picker,true);
-//
-//        }
-//        return super.onOptionsItemSelected(item);
+        if (id == R.id.action_next) {
+            int max = vPager.getChildCount();
+            if (vPager.getCurrentItem() < max - 1) {
+                int nextPage = vPager.getCurrentItem() + 1;
+                vPager.setCurrentItem(nextPage, true);
+
+            }
+
+        }
+        else if (id == R.id.action_previous) {
+            if (vPager.getCurrentItem() > 0) {
+                int previousPage = vPager.getCurrentItem() - 1;
+                vPager.setCurrentItem(previousPage, true);
+
+            }
+
+        }
+        else if(id == R.id.action_random){
+            Random random = new Random();
+            int max = vPager.getChildCount();
+            int picker = random.nextInt(max);
+            vPager.setCurrentItem(picker,true);
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
