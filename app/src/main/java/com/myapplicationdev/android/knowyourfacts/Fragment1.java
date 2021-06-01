@@ -1,5 +1,6 @@
 package com.myapplicationdev.android.knowyourfacts;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -27,13 +28,13 @@ public class Fragment1 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        colorlist = new ArrayList<>();
-        colorlist.add(android.R.color.holo_blue_bright);
-        colorlist.add(android.R.color.holo_purple);
-        colorlist.add(android.R.color.holo_green_dark);
-        colorlist.add(android.R.color.holo_red_dark);
-        colorlist.add(android.R.color.holo_orange_light);
-        colorlist.add(android.R.color.holo_blue_light);
+//        colorlist = new ArrayList<>();
+//        colorlist.add(android.R.color.holo_blue_bright);
+//        colorlist.add(android.R.color.holo_purple);
+//        colorlist.add(android.R.color.holo_green_dark);
+//        colorlist.add(android.R.color.holo_red_dark);
+//        colorlist.add(android.R.color.holo_orange_light);
+//        colorlist.add(android.R.color.holo_blue_light);
     }
 
     @Override
@@ -46,17 +47,21 @@ public class Fragment1 extends Fragment {
 
         String url = "https://wtffunfact.com/wp-content/uploads/2021/05/WTF-Fun-Fact-Birds-Unihemispheric-Sleep.png";
 
-        Picasso.with(getContext()).load(url).into(iv);
+//        Picasso.with(getContext()).load(url).into(iv);
 
         btnChangeBg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Random r = new Random();
-                int i1 = r.nextInt(5);
-                view.setBackgroundColor(getResources().getColor(colorlist.get(i1)));
+//                Random r = new Random();
+//                int i1 = r.nextInt(5);
+//                view.setBackgroundColor(getResources().getColor(colorlist.get(i1)));
+            Random r = new Random();
+            int i1 = r.nextInt(256);
+                int i2 = r.nextInt(256);
+                int i3 = r.nextInt(256);
+                view.setBackgroundColor(Color.rgb(i1,i2,i3));
             }
         });
         return view;
-        //commit again
     }
 }
