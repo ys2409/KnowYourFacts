@@ -21,6 +21,18 @@
         android:layout_height="wrap_content"
         android:text="change color" />
 
+    <TextView
+        android:id="@+id/tvRSS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnRSS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get data" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="800px"
