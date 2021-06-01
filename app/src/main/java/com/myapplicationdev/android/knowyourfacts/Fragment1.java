@@ -8,8 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -19,6 +22,7 @@ public class Fragment1 extends Fragment {
     Button btnChangeBg;
     TextView tv;
     ArrayList<Integer> colorlist;
+    ImageView iv;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,11 @@ public class Fragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_1, container, false);
         tv = view.findViewById(R.id.tv);
         btnChangeBg = view.findViewById(R.id.btnChangeColor);
+        iv = view.findViewById(R.id.imageView);
+
+        String url = "https://wtffunfact.com/wp-content/uploads/2021/05/WTF-Fun-Fact-Birds-Unihemispheric-Sleep.png";
+
+        Picasso.with(getContext()).load(url).into(iv);
 
         btnChangeBg.setOnClickListener(new View.OnClickListener() {
             @Override

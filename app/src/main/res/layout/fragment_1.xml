@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="#10AA9C"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv"
@@ -20,4 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="change color" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="800px"
+        android:layout_height="950px" />
+
 </LinearLayout>
