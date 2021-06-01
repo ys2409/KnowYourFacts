@@ -65,15 +65,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //if (id == R.id.action_next) {
-            int max = vPager.getChildCount();
-            if (vPager.getCurrentItem() < max - 1) {
-                int nextPage = vPager.getCurrentItem() + 1;
-                vPager.setCurrentItem(nextPage, true);
-
-            }
-
-        }
+//        if (id == R.id.action_next) {
+//            int max = vPager.getChildCount();
+//            if (vPager.getCurrentItem() < max - 1) {
+//                int nextPage = vPager.getCurrentItem() + 1;
+//                vPager.setCurrentItem(nextPage, true);
+//
+//            }
+//
+//        }
 //        else if (id == R.id.action_previous) {
 //            if (vPager.getCurrentItem() > 0) {
 //                int previousPage = vPager.getCurrentItem() - 1;
