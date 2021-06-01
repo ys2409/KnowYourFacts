@@ -11,8 +11,7 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Queen Elizabeth I regarded herself as a paragon of cleanliness. She declared that she bathed once every three months, whether she needed it or not"/>
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/changeColor"
