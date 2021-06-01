@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
 //
 //        }
 //        else if(id == R.id.action_random){
-//            Random rand = new Random();
+//            Random random = new Random();
 //            int max = vPager.getChildCount();
-//            int pick = rand.nextInt(max);
-//            vPager.setCurrentItem(pick,true);
+//            int picker = random.nextInt(max);
+//            vPager.setCurrentItem(picker,true);
 //
 //        }
 //        return super.onOptionsItemSelected(item);
