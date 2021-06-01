@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         al.add(new Fragment2());
         al.add(new Fragment3());
 
-        //adapter = new MyFragmentAdapter(fm, al);
+        adapter = new MyFragmentAdapter(fm, al);
 
-        //vPager.setAdapter(adapter);
+        vPager.setAdapter(adapter);
 
         btnReadLater.setOnClickListener(new View.OnClickListener() {
             @Override
