@@ -11,6 +11,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnReadLater;
     ViewPager vPager;
 
-
     MyFragmentAdapter adapter;
     ArrayList<Fragment> al;
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.options, menu);
         getMenuInflater().inflate(R.menu.options, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -91,5 +91,25 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        sharedpreferences = getApplicationContext().getSharedPreferences("pref",0);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        Log.d("id", String.valueOf(vPager.getCurrentItem()));
+        editor.putInt("pageId", vPager.getCurrentItem());
+        editor.commit();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        sharedpreferences = getApplicationContext().getSharedPreferences("pref",0);
+        if(sharedpreferences.contains("pageId")) {
+            Integer id = sharedpreferences.getInt("pageId", -1);
+            vPager.setCurrentItem(id);
+        }
     }
 }
